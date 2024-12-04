@@ -1,0 +1,19 @@
+services:
+  web:
+    build: .
+    container_name: flask-app
+    ports:
+      - "5000:5000"  # Expose le port 5000 du conteneur sur le port 5030 de votre machine
+    volumes:
+      - ./app:/app  # Monte le dossier ./app de votre machine sur /app dans le conteneur
+    #environment:
+      #- FLASK_APP=appy.py  # Spécifie le fichier principal Flask
+      #- FLASK_ENV=development  # Définit l'environnement de développement pour Flask
+    restart: always  # Redémarre le conteneur en cas de panne
+    
+
+
+
+
+
+
